@@ -1,0 +1,32 @@
+<mat-tab-group mat-align-tabs="center">
+    <mat-tab label="Encrypt">
+        <form class="form center">          
+            <mat-form-field class="full-width" appearance="fill">
+              <mat-label>Plain Text</mat-label>
+              <textarea matInput placeholder="Enter Plain text" #plaintext></textarea>
+            </mat-form-field>
+            <button class="center" mat-raised-button color="primary" (click)="$event.preventDefault();encrypt(plaintext,result1)">Encrypt</button>
+            <div class="result">
+                <pre class="center" #result1></pre>
+                <button *ngIf="result1.innerText" mat-icon-button aria-label="Copy Icon" [cdkCopyToClipboard]="copyFun(result1)" (click)="$event.preventDefault();openSnackBar()">
+                    <mat-icon >content_copy</mat-icon>
+                </button>
+            </div>
+          </form>
+    </mat-tab>
+    <mat-tab label="Decrypt">
+        <form class="form center">
+        <mat-form-field class="full-width" appearance="fill">
+          <mat-label>Encrypted Text</mat-label>
+          <textarea matInput placeholder="Enter Base64 Text" #publickey></textarea>
+        </mat-form-field>
+        <button class="center" mat-raised-button color="primary" (click)="$event.preventDefault();decrypt(publickey,result2)">Decrypt</button>
+        <div class="result">
+          <pre class="center" #result2></pre>
+          <button *ngIf="result2.innerText" mat-icon-button aria-label="Copy Icon" [cdkCopyToClipboard]="copyFun(result2)" (click)="$event.preventDefault();openSnackBar()">
+              <mat-icon matTooltip="Click to Copy">content_copy</mat-icon>
+          </button>
+      </div>
+      </form>
+    </mat-tab>
+  </mat-tab-group>

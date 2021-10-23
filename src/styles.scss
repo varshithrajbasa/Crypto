@@ -1,1 +1,25 @@
 /* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+.center{
+    margin: 0 auto;
+}
+.form {
+    min-width: 150px;
+    max-width: 700px;
+    width: 100%;
+    margin-top: 1rem;
+  }
+  
+  .full-width {
+    width: 100%;
+    & textarea{
+        min-height: 120px;
+    }
+  }
+  .result{
+      display:flex;
+      flex-direction: row;
+      margin-top: 1rem;
+  }
