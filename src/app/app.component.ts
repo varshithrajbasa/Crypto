@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Crypto';
+  routes=[
+    {link:'/crypto_js',name:'Crypto JS'},
+    {link:'/base64',name:'Base 64'},
+    {link:'/about',name:'About'}
+  ]
 }

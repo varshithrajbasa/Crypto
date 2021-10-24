@@ -2,9 +2,10 @@
   <span>Crypto App</span>
   <span class="example-spacer"></span>
   <div class="example-button-row">
-    <button mat-flat-button color="primary" routerLink="/crypto_js">Crypto JS</button>
-    <button mat-flat-button color="primary" routerLink="/base64">Base 64</button>
-    <button mat-flat-button color="primary" routerLink="/about">About</button>
+    <button  *ngFor="let route of routes" mat-flat-button color="primary" 
+    [routerLink]="route.link" 
+    routerLinkActive="active" 
+    [routerLinkActiveOptions]="{exact:true}">{{route.name}}</button>
   </div>
 
 </mat-toolbar>
@@ -13,7 +14,7 @@
 <div class="footer">
   <mat-toolbar color="primary">
     <span class="example-spacer"></span>
-    <span>Made with ❤</span>
+    <span>Made with <span style="color:red">❤</span></span>
     <span class="example-spacer"></span>
     <span>Made using Angular</span>
     <span class="example-spacer"></span>
