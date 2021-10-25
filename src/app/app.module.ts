@@ -17,6 +17,8 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import {MatTooltipModule} from '@angular/material/tooltip';
 import { AboutComponent } from './components/about/about.component';
+import {MatCardModule} from '@angular/material/card';
+import { UrlComponent } from './components/url/url.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,8 @@ import { AboutComponent } from './components/about/about.component';
     CryptojsComponent,
     Base64Component,
     NotfoundComponent,
-    AboutComponent
+    AboutComponent,
+    UrlComponent
   ],
   imports: [
     BrowserModule,
@@ -38,7 +41,8 @@ import { AboutComponent } from './components/about/about.component';
     ClipboardModule,
     MatIconModule,
     MatSnackBarModule,
-    MatTooltipModule
+    MatTooltipModule,
+    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -10,3 +10,8 @@
   .active{
     background-color: #f44336 ;
   }
+  @media screen and (max-width:500px) {
+    .footer{
+      display: none;
+    } 
+  }

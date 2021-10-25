@@ -10,6 +10,7 @@ export class AppComponent {
   routes=[
     {link:'/crypto_js',name:'Crypto JS'},
     {link:'/base64',name:'Base 64'},
+    {link:'/url',name:'Url'},
     {link:'/about',name:'About'}
   ]
 }
