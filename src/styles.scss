@@ -23,17 +23,3 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
       flex-direction: row;
       margin-top: 1rem;
   }
-  .mobile{
-      display: none;
-      font-size: large;
-      margin: 20% auto;
-      text-align: center;
-  }
-  @media screen and (max-width:500px) {
-      .app-root{
-        display: none;
-      }
-      .mobile{
-          display: block;
-      }
-  }
