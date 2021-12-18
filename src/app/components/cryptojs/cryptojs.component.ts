@@ -10,6 +10,8 @@ import {MatSnackBar,MatSnackBarHorizontalPosition,
   styleUrls: ['./cryptojs.component.scss']
 })
 export class CryptojsComponent implements OnInit {
+  default = "Private Key";
+  defaultError = "Private Key must be greater than 8 characters";
   constructor(private cryptojs: CryptoService,
     private clipboard:Clipboard,
     private _snackBar: MatSnackBar) { }
@@ -32,6 +34,16 @@ export class CryptojsComponent implements OnInit {
       horizontalPosition: 'end',
       verticalPosition: 'top',
     });
+  }
+  lenCheck(k,event){
+    if(event.target.value.length>=8){
+      k.innerText = this.default;
+      k.style = "";
+    }
+    else{
+    k.innerText = this.defaultError;
+    k.style = "color:red";
+    }
   }
   
 }

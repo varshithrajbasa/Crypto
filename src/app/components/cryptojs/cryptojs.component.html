@@ -2,8 +2,8 @@
     <mat-tab label="Encrypt">
         <form class="form center">
             <mat-form-field class="full-width" appearance="fill">
-                <mat-label>Private Key</mat-label>
-                <textarea matInput placeholder="Enter Private key..." #privatekey1></textarea>
+                <mat-label #pkey1>Private Key</mat-label>
+                <textarea matInput placeholder="Enter Private key..." #privatekey1 (change)="lenCheck(pkey1,$event)"></textarea>
               </mat-form-field>
           
             <mat-form-field class="full-width" appearance="fill">
@@ -22,8 +22,8 @@
     <mat-tab label="Decrypt">
         <form class="form center">
             <mat-form-field class="full-width" appearance="fill">
-                <mat-label>Private Key</mat-label>
-                <textarea matInput placeholder="Enter Private key..." #privatekey2></textarea>
+                <mat-label #pkey2>Private Key</mat-label>
+                <textarea matInput placeholder="Enter Private key..." #privatekey2 (change)="lenCheck(pkey2,$event)"></textarea>
             </mat-form-field>
       
         <mat-form-field class="full-width" appearance="fill">
