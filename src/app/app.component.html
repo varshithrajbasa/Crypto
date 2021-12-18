@@ -1,17 +1,29 @@
-<mat-toolbar color="primary">
+<mat-toolbar color="primary" class="header mat-elevation-z8">
+  <button mat-icon-button *ngIf="sidenav.mode === 'over'" (click)="sidenav.toggle()">
+    <mat-icon *ngIf="!sidenav.opened">
+        menu
+    </mat-icon>
+    <mat-icon *ngIf="sidenav.opened">
+        close
+    </mat-icon>
+</button>
   <span>Crypto App</span>
   <span class="example-spacer"></span>
-  <div class="example-button-row">
-    <button *ngFor="let route of routes" mat-flat-button color="primary" 
-    [routerLink]="route.link" 
-    routerLinkActive="active" 
-    [routerLinkActiveOptions]="{exact:true}">{{route.name}}</button>
-  </div>
+
 </mat-toolbar>
 
-<router-outlet></router-outlet>
+<mat-sidenav-container>
+  <mat-sidenav #sidenav="matSidenav" class="mat-elevation-z8">
+    <app-menu [routes]="routes"></app-menu>
+</mat-sidenav>
+  <mat-sidenav-content>
+      <div class="content mat-elevation-z8">
+        <router-outlet></router-outlet>
+      </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>
 
-<div class="footer">
+<!-- <div class="footer">
   <mat-toolbar color="primary">
     <span class="example-spacer"></span>
     <span>Made with <span style="color:red">❤</span></span>
@@ -21,4 +33,4 @@
     <span>Made by Varshith</span>
     <span class="example-spacer"></span> 
   </mat-toolbar>
-</div>
+</div> -->

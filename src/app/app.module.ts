@@ -16,9 +16,11 @@ import {ClipboardModule} from '@angular/cdk/clipboard';
 import {MatIconModule} from '@angular/material/icon';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import {MatTooltipModule} from '@angular/material/tooltip';
+import {MatSidenavModule} from '@angular/material/sidenav';
 import { AboutComponent } from './components/about/about.component';
 import {MatCardModule} from '@angular/material/card';
 import { UrlComponent } from './components/url/url.component';
+import { MenuComponent } from './components/menu/menu.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +29,8 @@ import { UrlComponent } from './components/url/url.component';
     Base64Component,
     NotfoundComponent,
     AboutComponent,
-    UrlComponent
+    UrlComponent,
+    MenuComponent
   ],
   imports: [
     BrowserModule,
@@ -42,7 +45,8 @@ import { UrlComponent } from './components/url/url.component';
     MatIconModule,
     MatSnackBarModule,
     MatTooltipModule,
-    MatCardModule
+    MatCardModule,
+    MatSidenavModule
   ],
   providers: [],
   bootstrap: [AppComponent]
