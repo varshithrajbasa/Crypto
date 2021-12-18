@@ -1,0 +1,13 @@
+<div *ngFor="let r of routes" 
+    [routerLink]="r.link"
+    class="router-btn"
+    routerLinkActive="active-btn" 
+    [routerLinkActiveOptions]="{exact:true}">{{r.name}}
+</div>
+<!-- <button *ngFor="let r of routes" mat-button class="menu-button" 
+[routerLink]="r.link"
+    class="router-btn"
+    routerLinkActive="active-btn" 
+    [routerLinkActiveOptions]="{exact:true}">
+    <span>{{r.name}}</span>
+</button> -->

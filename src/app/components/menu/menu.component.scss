@@ -1,0 +1,14 @@
+.router-btn{
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 8px;
+    &:hover{
+        background-color: rgba(0,0,0,.04);
+    }
+}
+.active-btn{
+    background-color: #ff4081 ;
+    &:hover{
+        background-color: #ff4081 ;
+    }
+}
