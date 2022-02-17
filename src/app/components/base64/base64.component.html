@@ -8,7 +8,7 @@
             <button class="center" mat-raised-button color="primary" (click)="$event.preventDefault();encrypt(plaintext,result1)">Encrypt</button>
             <div class="result">
                 <pre class="center" #result1></pre>
-                <button *ngIf="result1.innerText" mat-icon-button aria-label="Copy Icon" [cdkCopyToClipboard]="copyFun(result1)" (click)="$event.preventDefault();openSnackBar()">
+                <button *ngIf="result1.innerText" mat-icon-button aria-label="Copy Icon" (click)="$event.preventDefault();copyFun(result1);openSnackBar()">
                     <mat-icon >content_copy</mat-icon>
                 </button>
             </div>
@@ -23,7 +23,7 @@
         <button class="center" mat-raised-button color="primary" (click)="$event.preventDefault();decrypt(publickey,result2)">Decrypt</button>
         <div class="result">
           <pre class="center" #result2></pre>
-          <button *ngIf="result2.innerText" mat-icon-button aria-label="Copy Icon" [cdkCopyToClipboard]="copyFun(result2)" (click)="$event.preventDefault();openSnackBar()">
+          <button *ngIf="result2.innerText" mat-icon-button aria-label="Copy Icon" (click)="$event.preventDefault();copyFun(result2);openSnackBar()">
               <mat-icon matTooltip="Click to Copy">content_copy</mat-icon>
           </button>
       </div>
